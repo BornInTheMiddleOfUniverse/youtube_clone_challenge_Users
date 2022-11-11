@@ -1,4 +1,6 @@
 extends templates/layout
 
 block content
-  h1 Add your magic here
+  h1 #{loggedInUser.username}'s profile
+  div email: #{loggedInUser.email}
+  div location: #{loggedInUser.location}

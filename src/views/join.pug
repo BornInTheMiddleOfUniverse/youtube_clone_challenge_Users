@@ -1,0 +1,14 @@
+extends templates/layout
+
+block content
+    h1 Create Account
+    if errorMessage 
+        span.errorMessage=errorMessage 
+
+    form(method="POST")
+        input(placeholder="Username", type="text", name="username", required)
+        input(placeholder="Password", type="password", name="password", required)
+        input(placeholder="Confirm password", type="password", name="password2", required)        
+        input(placeholder="e-mail", type="text", name="email", required)
+        input(placeholder="location", type="text", name="location")
+        input(value="Join", type="submit")

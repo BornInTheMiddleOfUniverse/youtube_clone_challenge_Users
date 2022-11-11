@@ -1,0 +1,11 @@
+extends templates/layout
+
+block content
+    h1 Log in
+    if errorMessage 
+        span.errorMessage=errorMessage 
+        
+    form(method="POST")
+        input(placeholder="Username", type="text", name="username", required)
+        input(placeholder="Password", type="password", name="password", required)
+        input(value="Login", type="submit")
